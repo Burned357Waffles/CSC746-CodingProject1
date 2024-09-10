@@ -22,6 +22,8 @@ import matplotlib.pyplot as plt
 
 def compute_latency(data, nAccesses):
     if nAccesses == 0:
+        for i, d in enumerate(data):
+            data[i] = 0
         return data
 
     for i, time in enumerate(data):
