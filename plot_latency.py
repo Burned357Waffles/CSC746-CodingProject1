@@ -17,9 +17,7 @@ Assumptions: developed and tested using Python version 3.8.8 on macOS 11.6
 """
 
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
 
 
 def compute_latency(data, nAccesses):

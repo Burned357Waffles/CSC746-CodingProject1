@@ -17,9 +17,7 @@ Assumptions: developed and tested using Python version 3.8.8 on macOS 11.6
 """
 
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
 
 
 def compute_MFLOPs(data, ops):
@@ -29,15 +27,6 @@ def compute_MFLOPs(data, ops):
         data[i] = data[i] * nOps
 
     return data
-
-
-# chatGPT helped with formatting
-def scientific_notation_format(x, pos):
-    if x == 0:
-        return "0"
-    exponent = int(np.floor(np.log10(abs(x))))
-    base = x / 10**exponent
-    return f'{base:.0f} x 10$^{{{exponent}}}$'
 
 
 fname = "data_runtime.csv"
@@ -71,7 +60,6 @@ plt.plot(code3_MFLOPS, "g-^")
 xlocs = [i for i in range(len(problem_sizes))]
 plt.xticks(xlocs, labels=[f'$2^{{{x}}}$' for x in problem_sizes])
 
-plt.gca().yaxis.set_major_formatter(FuncFormatter(scientific_notation_format))
 
 #plt.xscale("log")
 #plt.yscale("log")
