@@ -1,5 +1,4 @@
 # author: Brandon Watanabe, Sept 2024
-# sample data for use with the plot_3vars.py file
 Problem Size,sum_direct,sum_vector,sum_indirect
 23,0.00120012,0.00351981,0.02882245
 24,0.00243582,0.00601232,0.06307901
